@@ -41,7 +41,9 @@ class ViewController: UIViewController {
             return
         }
         
-        navigationController?.pushViewController(destinationViewController, animated: true)
+        destinationViewController.modalTransitionStyle = .partialCurl
+//        navigationController?.pushViewController(destinationViewController, animated: true)
+        present(destinationViewController, animated: true, completion: nil)
     }
 }
 

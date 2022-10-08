@@ -14,6 +14,6 @@ class DestinationViewController: UIViewController{
     }
     
     @IBAction func dimissTapped(sender: Any){
-        dismiss(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }
