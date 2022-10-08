@@ -29,5 +29,19 @@ class ViewController: UIViewController {
         label.text = userName
       }
     }
+    
+    // button that will do something when pressed
+    @IBAction func segueTapped(sender: Any){
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+//        self.storyboard
+        guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DestinationViewController") as? DestinationViewController
+        else {
+            print("couldnt find the view controller")
+            return
+        }
+        
+        navigationController?.pushViewController(destinationViewController, animated: true)
+    }
 }
 
